@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<!-- script tags to call axios and handlebars -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+	<!-- script tag to insert car template and loop via each car and target the make data -->
+	<script type="text/x-template" class="carTemplate">
+		{{#each car}}
+		<li> 
+			{{make}}
+		</li>
+
+		{{/each}}
+	</script>
+
+  <!-- script tag to insert car template and loop via each car and target the model data -->
+	<script type="text/x-template" class="BrandTemplate">
+		{{#each car}}
+		<li> 
+			{{model}}
+		</li>
+
+		{{/each}}
+	</script>
+  
+	<!-- script tag to insert car template and loop via each car and target the color data -->
+	<script type="text/x-template" class="ColorTemplate">
+		{{#each car}}
+		<li> 
+			{{color}}
+		</li>
+
+		{{/each}}
+	</script>
+
+
+	<script type="text/x-template" class="dropColorTemp">
+		{{#each car}}
+		<li> 
+			{{color}}
+		</li>
+
+		{{/each}}
+
+
+	</script>
+
+
+</head>
+
+<body>
+    <div>
+	<h1>Car info</h1>
+	</div>
+
+	<h2>Cars</h2>
+	<div class="cars">
+
+	</div>
+
+	<h2>Brands</h2>
+	<div class="brands">
+	</div>
+
+	<h2>Colors</h2>
+	<div class="colors">
+
+	</div>
+
+	<div class="filtered-data"></div>
+
+
+
+	<!-- link car js file to this html -->
+	<script src="./car.js"></script>
+	<script src="./filter.js"></script>
+
+</body>
+
+</html>

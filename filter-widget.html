@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Filter widget</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+</head>
+
+<body>
+
+
+	<h1>Filter widget</h1> 
+
+		<label for="cars">Choose a make:</label>
+		<select name="cars" id="myCars">
+		  <option value="Volkswagen">Volkswagen</option>
+		  <option value="Nissan">Nissan</option>
+		  <option value="Ford">Ford</option>
+		  <option value="Toyota">Toyota</option>
+		 
+		</select>
+			
+		
+		<label for="cars">Choose a color:</label>
+		<select name="cars" id="myColors">
+			<option value="White">White</option>
+			<option value="Blue">Blue</option>
+			<option value="Red">Red</option>
+			<option value="Orange">Orange</option>
+			
+		</select>
+		
+		<button class="btn" type="submit">Submit</button> 
+	  <br>
+	  <br>
+
+	<table class="table" border="1" cellpadding="15" cellspacing="0" width="50%" height="60%" >
+		<thead>
+			<tr>
+				<th>Car </th>
+				<th>Brand</th>
+				<th>Color</th>
+			</tr>
+
+		</thead>
+		<tbody class="apiData">
+			<script type="text/template-x" class="displayingTemplate">
+
+				{{#each car}}
+				<tr>
+
+			    <td>{{make}}</td>
+			    <td>{{model}}</td>
+			    <td>{{color}}</td>
+		        </tr>
+		        {{/each}}
+		       
+			</script>
+
+			<script type="text/template-x" class="displayingTemplateTwo">
+
+				{{#each car}}
+				<tr>
+
+			    <td>{{make}}</td>
+			    <td>{{model}}</td>
+			    <td>{{color}}</td>
+		        </tr>
+		        {{/each}}
+		       
+			</script>
+
+			<script type="text/template-x" class="displayingTemplateThree">
+
+				{{#each car}}
+				<tr>
+
+			    <td>{{make}}</td>
+			    <td>{{model}}</td>
+			    <td>{{color}}</td>
+		        </tr>
+		        {{/each}}
+		       
+			</script>
+		</tbody>
+
+	</table>
+
+
+
+
+
+</body>
+
+<script src="./filter.js"></script>
+
+</html>

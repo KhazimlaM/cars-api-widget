@@ -24,29 +24,29 @@ axios
     });
 
 
-axios
-    .get('https://api-tutor.herokuapp.com/v1/colors')
-    .then(Results => {
-        console.log(Results.data);
+// axios
+//     .get('https://api-tutor.herokuapp.com/v1/colors')
+//     .then(Results => {
+//         console.log(Results.data);
 
-        let myList = colorTemplates({
-            car: Results.data
-        })
-        displayingApi.innerHTML = myList
+//         let myList = colorTemplates({
+//             car: Results.data
+//         })
+//         displayingApi.innerHTML = myList
 
-    });
+//     });
 
-axios
-    .get('https://api-tutor.herokuapp.com/v1/makes')
-    .then(Resultz => {
-        console.log(Resultz.data);
+// axios
+//     .get('https://api-tutor.herokuapp.com/v1/makes')
+//     .then(Resultz => {
+//         console.log(Resultz.data);
 
-        let theList = makeTemplates({
-            car: Resultz.data
-        })
-        displayingApi.innerHTML = theList
-
-    });
+//         let theList = makeTemplates({
+//             car: Resultz.data
+//         })
+//         displayingApi.innerHTML = theList
+// 
+// });
 
 
 myButton.addEventListener('click', function () {
@@ -68,36 +68,36 @@ myButton.addEventListener('click', function () {
         });
 
 
-    axios
-        .get(`https://api-tutor.herokuapp.com/v1/cars/make/${carDropdown.value}`)
-        .then(filtering => {
-            console.log(filtering.data);
+    // axios
+    //     .get(`https://api-tutor.herokuapp.com/v1/cars/make/${carDropdown.value}`)
+    //     .then(filtering => {
+    //         console.log(filtering.data);
 
 
-            let List = carTemplates({
-                car: filtering.data
-            })
-            displayingApi.innerHTML = List
+    //         let List = carTemplates({
+    //             car: filtering.data
+    //         })
+    //         displayingApi.innerHTML = List
 
 
 
-        })
+    //     })
     
         
        
-        axios
-        .get(`https://api-tutor.herokuapp.com/v1/cars/color/${colorDropdown.value}`)
-        .then(filtering => {
-            console.log(filtering.data);
+    //     axios
+    //     .get(`https://api-tutor.herokuapp.com/v1/cars/color/${colorDropdown.value}`)
+    //     .then(filtering => {
+    //         console.log(filtering.data);
 
 
-            let List = carTemplates({
-                car: filtering.data
-            })
-            displayingApi.innerHTML = List
+    //         let List = carTemplates({
+    //             car: filtering.data
+    //         })
+    //         displayingApi.innerHTML = List
 
 
-        })
+    //     })
 
     });
 

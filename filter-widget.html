@@ -15,8 +15,9 @@
 <body>
 
 
-	<h1>Filter widget</h1> 
-
+	
+	<div style="display: flex;flex-direction:column;align-items: center;">
+		<h1>Filter widget</h1> 
 		<label for="cars">Choose a make:</label>
 		<select name="cars" id="myCars">
 		  <option value="Volkswagen">Volkswagen</option>
@@ -25,7 +26,8 @@
 		  <option value="Toyota">Toyota</option>
 		 
 		</select>
-			
+		<br>
+		
 		
 		<label for="cars">Choose a color:</label>
 		<select name="cars" id="myColors">
@@ -35,11 +37,13 @@
 			<option value="Orange">Orange</option>
 			
 		</select>
-		
+		<br>
 		<button class="btn" type="submit">Submit</button> 
-	  <br>
-	  <br>
 
+		</div>
+	  <br>
+	  <br>
+	  <div style="display: flex;justify-content: center;">
 	<table class="table" border="1" cellpadding="15" cellspacing="0" width="50%" height="60%" >
 		<thead>
 			<tr>
@@ -99,7 +103,7 @@
 		</tbody>
 
 	</table>
-
+	  </div>
 
 
 
